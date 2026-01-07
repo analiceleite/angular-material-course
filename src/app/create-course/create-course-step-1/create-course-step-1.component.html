@@ -18,7 +18,7 @@
         <mat-radio-button value="premium">Premium</mat-radio-button>
     </mat-radio-group>
 
-    <mat-form-field >
+    <mat-form-field>
         <mat-select multiple formControlName="category" placeholder="Select category">
             <mat-option>None</mat-option>
 
@@ -36,15 +36,13 @@
     <mat-form-field appearance="outline">
         <input matInput formControlName="releasedAt" placeholder="Release data" [matDatepicker]="releaseAtPicker">
 
-        <mat-datepicker-toggle matSuffix [for]="releaseAtPicker" placeholder="Release date">
+        <mat-datepicker-toggle matSuffix [for]="releaseAtPicker" placeholder="Release date"></mat-datepicker-toggle>
 
-        </mat-datepicker-toggle>
-
-        <mat-datepicker #releaseAtPicker [dateClass]="dateClass">
-
-        </mat-datepicker>
+        <mat-datepicker #releaseAtPicker [dateClass]="dateClass"></mat-datepicker>
     </mat-form-field>
 
+    <mat-checkbox color="primary" formControlName="downloadsAllowed" [indeterminate]="true">
+        Downloads allowed?
+    </mat-checkbox>
+
 </div>
-
-
