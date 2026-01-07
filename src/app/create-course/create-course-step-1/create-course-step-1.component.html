@@ -1,6 +1,6 @@
 <div [formGroup]="form" class="course-details-form">
 
-    <mat-form-field floatLabel="auto">
+    <mat-form-field appearance="outline">
         <input matInput placeholder="Course title" formControlName="title" #title>
 
         <mat-hint align="end">
@@ -18,7 +18,7 @@
         <mat-radio-button value="premium">Premium</mat-radio-button>
     </mat-radio-group>
 
-    <mat-form-field>
+    <mat-form-field appearance="outline">
         <mat-select multiple formControlName="category" placeholder="Select category">
             <mat-option>None</mat-option>
 
@@ -44,5 +44,9 @@
     <mat-checkbox color="primary" formControlName="downloadsAllowed" [indeterminate]="true">
         Downloads allowed?
     </mat-checkbox>
+
+    <mat-form-field appearance="outline">
+        <textarea matInput placeholder="Description" formControlName="longDescription" cdkTextareaAutosize [cdkAutosizeMinRows]="2" [cdkAutosizeMaxRows]="7"></textarea>
+    </mat-form-field>
 
 </div>
